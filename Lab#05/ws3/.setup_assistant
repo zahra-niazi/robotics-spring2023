@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: fumti
+    relative_path: urdf/model.urdf.xacro
+  srdf:
+    relative_path: config/model.srdf
+  package_settings:
+    author_name: ali
+    author_email: alimojahed0079@gmail.com
+    generated_timestamp: 1682588189
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

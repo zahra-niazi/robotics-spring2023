@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="model">
+  <link name= "world" />
+
+  <joint name= "worldJ0" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <parent
+      link="world" />
+    <child
+      link="6RL0" />
+    <dynamics damping="10" friction="1.0"/>
+  </joint>
+  <link name="6RL0">
+    <inertial>
+      <origin
+        xyz="0.003 0 -0.005"
+        rpy="0 0 0" />
+      <mass
+        value="1.781" />
+      <inertia
+        ixx="0.376"
+        ixy="0"
+        ixz="-0.001"
+        iyy="0.364"
+        iyz="0"
+        izz="0.65" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="6RL1">
+    <inertial>
+      <origin
+        xyz="-0.016 -0.02 0.195"
+        rpy="0 0 0" />
+      <mass
+        value="0.923" />
+      <inertia
+        ixx="0.557"
+        ixy="-0.009"
+        ixz="-0.018"
+        iyy="0.601"
+        iyz="-0.076"
+        izz="0.362" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ1" type="revolute">
+    <origin
+      xyz="0 0 0.0635"
+      rpy="0 0 0" />
+    <parent
+      link="6RL0" />
+    <child
+      link="6RL1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="-1"
+      velocity="-1" />
+      <dynamics damping="10" friction="1.0"/>
+  </joint>
+  <link name="6RL2">
+    <inertial>
+      <origin
+        xyz="0.183 0 0.082"
+        rpy="0 0 0" />
+      <mass
+        value="0.89" />
+      <inertia
+        ixx="0.067"
+        ixy="0"
+        ixz="0.044"
+        iyy="1"
+        iyz="0"
+        izz="1.034" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ2" type="revolute">
+    <origin
+      xyz="0 0 0.326"
+      rpy="4.7124 -1.5708 0" />
+    <parent
+      link="6RL1" />
+    <child
+      link="6RL2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="-1"
+      velocity="-1" />
+      <dynamics damping="10" friction="1.0"/>
+  </joint>
+  <link name="6RL3">
+    <inertial>
+      <origin
+        xyz="0.128 0.002 -0.003"
+        rpy="0 0 0" />
+      <mass
+        value="0.16" />
+      <inertia
+        ixx="0.618"
+        ixy="-0.007"
+        ixz="0.019"
+        iyy="0.331"
+        iyz="-0.005"
+        izz="0.791" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ3" type="revolute">
+    <origin
+      xyz="0.6 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="6RL2" />
+    <child
+      link="6RL3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="-1"
+      velocity="-1" />
+      <dynamics damping="10" friction="1.0"/>
+  </joint>
+  <link name="6RL4">
+    <inertial>
+      <origin
+        xyz="0 0.015 0.562"
+        rpy="0 0 0" />
+      <mass
+        value="0.0742" />
+      <inertia
+        ixx="0.04"
+        ixy="0"
+        ixz="0"
+        iyy="0.032"
+        iyz="0.004"
+        izz="0.018" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ4" type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="6RL3" />
+    <child
+      link="6RL4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="-1"
+      velocity="-1" />
+      <dynamics damping="10" friction="1.0"/>
+  </joint>
+  <link name="6RL5">
+    <inertial>
+      <origin
+        xyz="-0.003 0.02 -0.013"
+        rpy="0 0 0" />
+      <mass
+        value="0.0615" />
+      <inertia
+        ixx="0.007"
+        ixy="0"
+        ixz="0"
+        iyy="0.006"
+        iyz="0"
+        izz="0.008" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ5" type="revolute">
+    <origin
+      xyz="0 0 0.6855"
+      rpy="1.5708 0 0" />
+    <parent
+      link="6RL4" />
+    <child
+      link="6RL5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="-1"
+      velocity="-1" />
+      <dynamics damping="10" friction="1.0"/>
+  </joint>
+  <link name="6RL6">
+    <inertial>
+      <origin
+        xyz="0 0 0.029"
+        rpy="0 0 0" />
+      <mass
+        value="0.00955" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/zahra/ws_moveit2/src/fumti/meshes/6RL6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ6" type="revolute">
+    <origin
+      xyz="0 0.079 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="6RL5" />
+    <child
+      link="6RL6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="-1"
+      velocity="-1" />
+      <dynamics damping="10" friction="1.0"/>
+  </joint>
+
+  <link name="camera_link">
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+
+  <joint name= "camera_joint" type="fixed">
+      <axis xyz="0 0 0" />
+      <origin xyz="0.1 0 0" rpy="3.14 -1.57 0"/>
+      <parent link="6RL6"/>
+      <child link="camera_link"/>
+    <dynamics damping="10" friction="1.0"/>
+  </joint>
+  
+
+
+  <gazebo reference="camera_link">
+    <sensor name='camera' type='camera'>
+      <pose>0 0 0 0 0 0</pose>
+      <topic>camera</topic>
+      <update_rate>30</update_rate>
+      <enable_metrics>false</enable_metrics>
+      <camera name='__default__'>
+        <pose>0 0 0 0 0 0</pose>
+        <horizontal_fov>1.0469999999999999</horizontal_fov>
+        <image>
+          <width>320</width>
+          <height>240</height>
+          <format>RGB_INT8</format>
+          <anti_aliasing>4</anti_aliasing>
+        </image>
+        <camera_info_topic>__default__</camera_info_topic>
+        <trigger_topic></trigger_topic>
+        <triggered>false</triggered>
+        <clip>
+          <near>0.10000000000000001</near>
+            <far>100</far>
+        </clip>
+        <save enabled='true'>
+          <path>/home/zahra/Desktop</path>
+        </save>
+        <visibility_mask>4294967295</visibility_mask>
+        <noise>
+          <type>none</type>
+          <mean>0</mean>
+          <stddev>0</stddev>
+        </noise>
+        <distortion>
+          <k1>0</k1>
+          <k2>0</k2>
+          <k3>0</k3>
+          <p1>0</p1>
+          <p2>0</p2>
+          <center>0.5 0.5</center>
+        </distortion>
+        <lens>
+          <type>stereographic</type>
+          <scale_to_hfov>true</scale_to_hfov>
+          <cutoff_angle>1.5707963267948966</cutoff_angle>
+          <env_texture_size>256</env_texture_size>
+        </lens>
+        <optical_frame_id></optical_frame_id>
+      </camera>
+      <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+        <render_engine>ogre</render_engine>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+<ros2_control name="GazeboSystem" type="system">
+  <hardware>
+    <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+  </hardware>
+  <joint name="6RJ1">
+    <command_interface name="position">
+      <param name="min">-10</param>
+      <param name="max">10</param>
+    </command_interface>
+    <state_interface name="position">
+      <param name="initial_value">0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="6RJ2">
+    <command_interface name="position">
+      <param name="min">-10</param>
+      <param name="max">10</param>
+    </command_interface>
+    <state_interface name="position">
+      <param name="initial_value">0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="6RJ3">
+    <command_interface name="position">
+      <param name="min">-10</param>
+      <param name="max">10</param>
+    </command_interface>
+    <state_interface name="position">
+      <param name="initial_value">0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="6RJ4">
+    <command_interface name="position">
+      <param name="min">-10</param>
+      <param name="max">10</param>
+    </command_interface>
+    <state_interface name="position">
+      <param name="initial_value">0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="6RJ5">
+    <command_interface name="position">
+      <param name="min">-10</param>
+      <param name="max">10</param>
+    </command_interface>
+    <state_interface name="position">
+      <param name="initial_value">0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="6RJ6">
+    <command_interface name="position">
+      <param name="min">-10</param>
+      <param name="max">10</param>
+    </command_interface>
+    <state_interface name="position">
+      <param name="initial_value">0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+</ros2_control>  
+
+<gazebo>
+  <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="gz_ros2_control-system">
+    <!-- <robot_param>robot_description</robot_param> -->
+    <!-- <robot_param_node>robot_state_publisher</robot_param_node> -->
+    <parameters>src/ws3/config/ros2_controllers_gz.yaml</parameters>
+    <controller_manager_prefix_node_name>controller_manager</controller_manager_prefix_node_name>
+  </plugin>
+</gazebo>
+
+
+</robot>
