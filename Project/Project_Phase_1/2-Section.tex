@@ -1,0 +1,57 @@
+\newpage
+\section{Application Scenario}
+\label{chapter2}
+\textit{}
+%---- the scope of this chapter}}
+
+In this review, we divide the application scenarios of DRL navigation into four categories: local obstacle avoidance, indoor navigation, multi-robot navigation, and social navigation. A simple comparison of these scenarios is shown in Table \ref{tb:drlNav}. Each scenario has
+the same basic navigation tasks but features different emphases and details. The local obstacle-avoidance scenario emphasizes dynamic changes in the simple structural environment, whereas indoor navigation
+focuses on the complexity of the indoor structural environment. The multi-robot navigation scenario involves an environment with multiple high-speed mobile robots. Social navigation focuses on moving through pedestrian-rich environments. In this review our main focus is on local obstacle avoidance and indoor navigation.
+
+\begin{table}[H]
+% \centering
+\caption{Simple comparison of different DRL-based navigation scenarios.}
+\label{table:symbols}
+\begin{tabular}{p{2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{2cm}p{1.5cm}}
+\hline
+Navigation Scenario & Static obstacle & Dynamic obstacle & Structured continuous obstacle & Obstacle scale & Obstacle velocity & Cooperation & Randomness \\ \hline
+Local obstacle avoidance & Y & Y  & N & Low & Low & - & - \\
+Indoor navigation & Y & N  & Y & Low & - & - & - \\
+Multi-robot navigation & Y & Y  & N & High & High & Y & Low \\
+Social navigation & Y & Y  & N & High & High & N & High\\ \hline
+\end{tabular}
+\label{tb:drlNav}
+
+\end{table}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/Drl-based-navigation.png}
+	\caption{Four application scenarios of DRL-based navigation.}
+	\label{fig:DRLNavScenario}
+\end{figure}
+
+
+\subsection{Local Obstacle Avoidance}
+\subsubsection{Feature}
+As mobile robots navigate through their operational environment, they have to deal with variety of obstacles in order to reach their destination. Therefore, the ability to avoid obstacles during navigation is a crucial module in autonomous systems. The location of obstacles may be known as part of the environment map but oftentimes the map is not known beforehand. Thus, it is highly desirable for autonomous mobile robots to be able to detect and avoid obstacles in real- time during navigation. Several obstacle avoidance methods exist in the literature which are reviewed in this section.
+The local obstacle-avoidance scenario, which is the most common application scenario of the DRL-based navigation system, is the basis of the other scenarios and can be extended to more complex navigation tasks. In traditional navigation frameworks, reactive methods
+are typically used to solve this type of problem, such as the APF or velocity-based methods. One of the biggest problems of reactive methods is the need for a good sensor system that can generate accurate position coordinates for any local obstacle. DRL methods
+implicitly process sensor data through neural networks, which overcome the shortcomings of traditional obstacle- avoidance methods. The energy calculation for life cycle inventory is basically similar for all the production processes. 
+
+\subsubsection{Development}
+In 2016, Duguleana and Mogan\cite{duguleana2016} studied autonomous navigation in environments containing static and dynamic obstacles; they combined the neural network Pose-Net and a 30-20-3 multi-layer perceptron with the famous RL method Q learning\cite{watkins1989}. By dividing the surrounding obstacle environment into eight angular regions, they reduced the number of states. Pose-Net can output three discrete actions, i.e., moving forward, turning left, and turning right. This early research realized effective obstacle avoidance in simple physical environments. Subsequently, DRL solutions, such as DQN, were rapidly developed, receiving widespread attention. In numerous works, mature DRL methods have been applied to local obstacle-avoidance scenarios. Feng et al.\cite{feng2019} used DDQN to train the agent in a simulation environment to avoid collisions with a wall without using a target point.
+
+\subsubsection{Sensor Robustness}
+In most studies, DRL-based navigation applications must be deployed using the same sensors as those used in the training environment. When faced with different hardware conditions, the system may fail. Aznar et al.\cite{aznar2019} designed a navigation policy specifically for fault tolerance, whereby the proposed system can continue to work normally under sensor failure conditions and shows several advantages in its robustness, scalability, and practicality. Choi et al.\cite{choi2019} studied the limited Field Of View (FOV) problem. They transformed depth data obtained by a D435 depth camera with a FOV of 90ı into distance data and proposed a Long Short-Term Memory (LSTM) agent with a Local-Map Critic (LSTM- LMC) that has memory ability. The proposed method improves the robustness of DRL agents in the real world by introducing a dynamics randomization technique, including scan noise, velocity randomization, and time-scale randomization. In addition, the sensors on the robot
+can be replaced, or the parameters can be changed (e.g., the resolution and range of the lidar can be changed). Using another approach to solve the sensor robustness problem, Leiva and Ruiz-del-Solar\cite{leiva2020} incorporated the corresponding angle of the range measurement as part of the observation, which allows the learning of features that are independent of the geometric distribution of the readings. The authors used variably sized 2D point clouds as the agent’s 2D observations, thereby improving robustness and extensibility to the real world.
+
+
+\subsection{Indoor navigation}
+\subsubsection{Feature}
+Here, the indoor navigation scenario refers to a house with multiple rooms or a 3D maze-like environment with numerous walls and corridors. Although the local obstacle-avoidance scenarios in the previous section may also be indoors, their structures are often relatively simple. In this section, we focus on indoor navigation scenarios with a complex structural environment. 
+The A3C algorithm proposed by Mnih et al.\cite{mnih2016} is a representative Actor-Critic (AC) method. The classic policy gradient algorithm directly optimizes the agent’s policy; it must collect a series of complete sequence data to update the policy. In DRL, collecting sequence data is often challenging and large variances can be introduced. The AC structure that combines the value function with the policy gradient method is receiving much attention.
+In 2017, Mirowski et al.\cite{mirowski2016} adjusted the network structure of A3C and proposed the Nav A3C algorithm, in which two LSTM layers are added between the CNN and the output layer. However, NAV A3C was found to have an unstable policy, poor data efficiency, and poor robustness in a complex environment. Zeng and Wang\cite{zeng2020} used the monotonic policy improvement advantage of PPO and proposed the appoNav (asynchronous PPO) algorithm to solve the visual navigation problem.
+In previous research\cite{zhu2017}, the DRL algorithm was found to be generalizable to new scenarios, but at the expense of a decrease in performance and the need to fine-tune the network. To improve the generalization ability of the visual navigation algorithm, Devo et al.\cite{devo2020} proposed the importance weighted actor–learner architecture, a new framework comprising object localization and navigation networks.
+
+

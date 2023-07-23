@@ -1,0 +1,8 @@
+\newpage
+\section{Conclusion}
+\label{chapter3}
+
+
+Here we present our problem and the way to tackle it; Consider a maze with flat ground. We place the robot at the start point and we also consider a goal which is located in our maze.
+Eddie has to reach the goal and it must use an optimal path to do so. The point is that our maze has lots of obstacles and one of the topics we wish to discuss is static obstacle avoidance.
+The method that helps us here is Reinforcement Learning. As previously mentioned, we prefer to use Policy Gradint methods especially A2C. Firstly we define a reward function. Then we define two terms in order to show the angle and the distance of Eddie to the goal and we also consider two -x and +x rewards for collision and reaching the goal respectively. Next we have to construct our actor policy network in order to get the depth image as input and output velocity as an action. We also define a critic network because we have to modify our actor Policy network. To do this we use "Baseline3" library that provides Deep RL algorithms.
