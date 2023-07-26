@@ -1,0 +1,106 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{biolinum} % Option 'sfdefault' only if the base font of the document is to be sans serif
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+% Use \lstset to make myStyle the global default
+\lstset{style=mystyle}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{blindtext} %for enumarations
+\usepackage[]{hyperref}  %link collor
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\huge} % Make all sections centered, the default font and small caps
+\subsectionfont{\LARGE}
+\subsubsectionfont{\Large}
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead[R]{Project Phase 2} % Empty left header
+\fancyhead[C]{} % Empty center header
+\fancyhead[L]{Introduction to Robotics} % Course name for right header
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{1pt} % Header underlines
+\renewcommand{\footrulewidth}{1pt} % Footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\usepackage{secdot}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\Huge Exploration of 2D/Visual SLAM and Autonomous Navigation with Parallax Eddie Robot \\[0.4cm]
+\horrule{0.8pt} \\[0.4cm] % Thick bottom horizontal rule
+\date{}
+}
+\author{Zahra Niazi} % Your name
+
+\begin{document}
+\maketitle % Print the title
+\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Section 1
+%----------------------------------------------------------------------------------------
+\input{1-final-setup.tex}
+
+
+%----------------------------------------------------------------------------------------
+%	Section 2
+%----------------------------------------------------------------------------------------
+
+\input{2-odometry.tex}
+
+%----------------------------------------------------------------------------------------
+%	Section 3
+%----------------------------------------------------------------------------------------
+
+\input{3-slam-&-navigation.tex}
+
+
+
+\end{document}
