@@ -25,3 +25,9 @@ Read the instructions below and proceed step by step.
 Design a package called `turtlemania` that creates 3 turtles in addition to the original turtle. The first turtle must follow the initial turtle with a delay of 2 seconds. The second turtle must follow the first turtle with a delay of 2 seconds, and the third turtle must follow the second turtle with a delay of 2 seconds. For example, in the case of the second turtle, 2 seconds delay means what the position of the first turtle 2 seconds ago compared to the current position of the second turtle is.
 
 Move the initial turtle using teleop. Use a launch file to run your system. You can use the codes for [turtle_tf2 demo](https://github.com/ros/geometry_tutorials/blob/ros2/turtle_tf2_py) that was used in the tutorials.
+<p align = "center">
+<img src = "exec2.png">
+</p>
+<p align = "center">
+Exercise 2
+</p>
