@@ -1,0 +1,15 @@
+launch:
+
+- node:
+    pkg: "alicesim"
+    exec: "alicenode"
+    name: "alicesim"
+    namespace: "alice_bob_ns"
+
+- node:
+    pkg: "bobsim"
+    exec: "bobnode"
+    name: "bobsim"
+    namespace: "alice_bob_ns"
+
+

@@ -1,0 +1,25 @@
+launch:
+
+- node:
+    pkg: "yinsim"
+    exec: "yinnode"
+    name: "yinsim"
+    namespace: "yin_yang_ns"
+    param:
+    -
+        name: "opacity"
+        value: 90
+    -
+        name: "shout"
+        value: True
+
+    
+- node:
+    pkg: "yangsim"
+    exec: "yangnode"
+    name: "yangsim"
+    namespace: "yin_yang_ns"
+    param:
+    -
+        name: "shout"
+        value: True
