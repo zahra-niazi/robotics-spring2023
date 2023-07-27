@@ -8,6 +8,14 @@ In this lab, we are going to add a LIDAR sensor to the mobile robot designed in 
 
 Add a LIDAR sensor to the previous robot mobile using [this tutorial](https://gazebosim.org/docs/garden/sensors#lidar-sensor). Add this model to the `maze.sdf` world, making sure to add the relevant plugins and reduce the physical size of the model so that it fits easily in the world. 
 
+<p align = "center">
+<img src = "exec1.png">
+</p>
+<p align = "center">
+Exercise 1
+</p>
+
+
 # Exercise 2
 
 Bridge the `/lidar` topic using [ros_gz_bridge](https://github.com/gazebosim/ros_gz/tree/ros2/ros_gz_bridge). Run rviz2 and add a LaserScan display. Specify the sensor topic and make sure the simulation is running.  Are the points related to LaserScan visible?
@@ -20,6 +28,23 @@ $ ros2 run tf2_ros static_transform_publisher "0" "0" "0" "0" "0" "0" "world" "v
 
 Run rviz again and repeat the previous steps. Are the points related to the sensor visible this time? Why?
 
+<p align = "center">
+<img src = "exec2.png">
+</p>
+<p align = "center">
+Exercise 2
+</p>
+
+
 # Exercise 3
 
 Write a ROS2 package  that uses [ros_gz_bridge](https://github.com/gazebosim/ros_gz/tree/ros2/ros_gz_bridge) to bridge the topics related to Twist and LaserScan between Gazebo and ROS2 and drives the robot using them. If the robot gets too close to a wall, it should back off a bit, change directions, and then start moving forward again. Use the `maze.sdf` world and write a launch file to run your bridge and node.
+
+<p align = "center">
+<img src = "exec3.gif">
+</p>
+<p align = "center">
+Exercise 3
+</p>
+
+
