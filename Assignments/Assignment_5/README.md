@@ -32,7 +32,12 @@ Then, using colcon, build the `eddiebot_rviz` and `eddiebot_description` package
 ```shell
 $ ros2 launch eddiebot_rviz view_model.launch.py description:='True'
 ```
-
+<p align = "center">
+<img src = "exec1.png">
+</p>
+<p align = "center">
+Exercise 1
+</p>
 
 # Exercise 2
 
@@ -49,6 +54,13 @@ In Gazebo and from the top right menu, add the Teleop module and put the followi
 ```
 
 Then run the simulation and try to move the robot using the keyboard. 
+
+<p align = "center">
+<img src = "exec2.png">
+</p>
+<p align = "center">
+Exercise 2
+</p>
 
 # Exercise 3
 
@@ -69,3 +81,12 @@ $ ros2 interface show sensor_msgs/msg/Image
 Check the image message type and if necessary use [*GitHub search*](https://github.com/searchq=sensor_msgs%2Fmsg%2FImage+rclcpp+language%3AC%2B%2B&type=code&l=C%2B%2B) to check out sample codes that use camera sensor data.
 
 Design a launch file that first calls the launch file of the previous exercise and then starts the necessary bridges for the topics related to the normal image of the Kinect sensor and the speed control of the robot. Finally, it should run the node you created.
+
+<p align = "center">
+<video>
+  <source src="exec3.webm" type="video/webm">
+</video>
+</p>
+<p align = "center">
+Exercise 3
+</p>
