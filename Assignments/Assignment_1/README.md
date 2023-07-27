@@ -37,3 +37,9 @@ Design two packages named bobsim and alicesim that contain bobnode and alicenode
 SEND_HELP!
 Is. Choosing the topic name, topic message type, and message separator is optional. After the alicenode receives the message and decodes it, it prints it and exits.
 Print the topic messages in a terminal using echo and take a screenshot along with the alicenode output at the end of the execution.
+<p align = "center">
+<img src = "exec2.png">
+</p>
+<p align = "center">
+Exercise 2
+</p>
