@@ -14,7 +14,9 @@
             filename="gz-sim-sensors-system"
             name="gz::sim::systems::Sensors">
             <render_engine>ogre2</render_engine>
-        </plugin>        
+        </plugin>
+
+                
         <light name='sun' type='directional'>
             <cast_shadows>1</cast_shadows>
             <pose>0 0 10 0 -0 0</pose>
@@ -1056,19 +1058,20 @@
                 <pose>0.8 0 0.5 0 0 0</pose>
             </frame>
 
+
             <!--chassis-->
             <link name='chassis'>
-                <pose relative_to='__model__'>0.5 0 0.4 0 0 0</pose>
+                <pose relative_to='__model__'>0.5 0 0.2 0 0 0</pose>
                 <inertial> <!--inertial properties of the link mass, inertia matix-->
-                    <mass>1.14395</mass>
-                   <inertia>
-                        <ixx>0.043333</ixx>
-                        <ixy>0</ixy>
-                        <ixz>0</ixz>
-                        <iyy>0.043333</iyy>
-                        <iyz>0</iyz>
-                        <izz>0.08</izz>
-                    </inertia>
+                <mass>1.14395</mass>
+                <inertia>
+                    <ixx>0.043333</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.043333</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.08</izz>
+                </inertia>
                 </inertial>
                 <visual name='visual'>
                     <geometry>
@@ -1196,14 +1199,52 @@
                 </collision>
             </link>
 
-            <!--arbitrary frame-->
-            <frame name="caster_frame" attached_to='chassis'>
-                <pose>0.45 0 -0.2 0 0 0</pose>
+            <frame name="front_caster_frame" attached_to='chassis'>
+                <pose>0.45 0 -0.1 0 0 0</pose>
             </frame>
+            <frame name="rear_caster_frame" attached_to='chassis'>
+                <pose>-0.45 0 -0.1 0 0 0</pose>
+            </frame>
+            <link name='front_caster'>
+                <pose relative_to='front_caster_frame'/>
+                <inertial>
+                    <mass>1</mass>
+                    <inertia>
+                        <ixx>0.016</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>0.016</iyy>
+                        <iyz>0</iyz>
+                        <izz>0.016</izz>
+                    </inertia>
+                </inertial>
+                <visual name='visual'>
+                    <geometry>
+                        <sphere>
+                            <radius>0.1</radius>
+                        </sphere>
+                    </geometry>
+                    <material>
+                        <ambient>0.0 1 0.0 1</ambient>
+                        <diffuse>0.0 1 0.0 1</diffuse>
+                        <specular>0.0 1 0.0 1</specular>
+                    </material>
+                </visual>
+                <collision name='collision'>
+                    <geometry>
+                        <sphere>
+                            <radius>0.1</radius>
+                        </sphere>
+                    </geometry>
+                </collision>
+            </link>
+            <joint name='front_caster_wheel' type='ball'>
+                <parent>chassis</parent>
+                <child>front_caster</child>
+            </joint>
 
-            <!--caster wheel-->
-            <link name='caster'>
-                <pose relative_to='caster_frame'/>
+            <link name='rear_caster'>
+                <pose relative_to='rear_caster_frame'/>
                 <inertial>
                     <mass>1</mass>
                     <inertia>
@@ -1236,6 +1277,12 @@
                 </collision>
             </link>
 
+            <joint name='rear_caster_wheel' type='ball'>
+                <parent>chassis</parent>
+                <child>rear_caster</child>
+            </joint>
+
+
             <!--left wheel joint-->
             <joint name='left_wheel_joint' type='revolute'>
                 <pose relative_to='left_wheel'/>
@@ -1264,11 +1311,11 @@
                 </axis>
             </joint>
 
-            <!--caster wheel joint--> <!--pose defult value is the child-->
-            <joint name='caster_wheel' type='ball'>
-                <parent>chassis</parent>
-                <child>caster</child>
-            </joint>
+
+            <plugin name='gz::sim::systems::OdometryPublisher' filename='gz-sim-odometry-publisher-system'>
+             <odom_topic>odom</odom_topic>
+            </plugin>
+
 
             <!--diff drive plugin-->
             <plugin
@@ -1277,12 +1324,12 @@
                 <left_joint>left_wheel_joint</left_joint>
                 <right_joint>right_wheel_joint</right_joint>
                 <wheel_separation>1.0</wheel_separation>
-                <wheel_radius>0.4</wheel_radius>
+                <wheel_radius>0.2</wheel_radius>
                 <odom_publish_frequency>1</odom_publish_frequency>
                 <topic>cmd_vel</topic>
             </plugin>
         </model>
-
+        
 
 
     </world>
