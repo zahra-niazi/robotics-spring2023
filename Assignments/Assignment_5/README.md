@@ -83,11 +83,9 @@ Check the image message type and if necessary use [*GitHub search*](https://gith
 Design a launch file that first calls the launch file of the previous exercise and then starts the necessary bridges for the topics related to the normal image of the Kinect sensor and the speed control of the robot. Finally, it should run the node you created.
 
 <p align = "center">
-<video>
-  <source src="exec3.webm" type="video/webm">
-</video>
+<img src = "exec3.gif">
 </p>
 <p align = "center">
 Exercise 3
 </p>
-![](https://github.com/zahra-niazi/robotics-spring2023/blob/main/Assignments/Assignment_5/exec3.gif)
+
