@@ -62,6 +62,13 @@ Commit the changes you made in exercise 1. The commit message must be descriptiv
 
 Launch the robot using Gazebo the same way we did in the previous assignments. From the top right menu, add five *Visualize LIDAR *GUI modules and click on the refresh button. Select one of the ultrasonic and ir topics in each module.
 
+<p align = "center">
+<img src = "exec2.png">
+</p>
+<p align = "center">
+Exercise 2
+</p>
+
 # Exercise 3
 
 Create a pull request on GitHub for the [arashsm79/eddiebot-ros](https://github.com/arashsm79/eddiebot-ros) repository with the changes you made in the branch you created. Take your time to write a pull request message that is as descriptive as possible.
