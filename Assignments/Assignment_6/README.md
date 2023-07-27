@@ -26,6 +26,13 @@ Write a launch file that does all of the following after starting the maze world
 
 2. The depth image to lase scan node. You need to remap the `depth_camera_info` and `depth` topics. Echo the new topic related to scan and see its header contents. What is the name of the frame specified in the header? What does this frame represent and what is its relationship with the points in the message?
 
+<p align = "center">
+<img src = "exec2.1.png">
+</p>
+<p align = "center">
+Exercise 2.2
+</p>
+
 3. Run Rviz2 and add the LaserScan section to it and specify the relevant topic. Set the size in LaserScan to 0.1.
 
 4. Using the command as an example
@@ -39,6 +46,13 @@ you can send a zero static conversion from parent frame foo to child frame bar i
 * "camera_link" → "camera_depth_frame"
 
 Now add teleop module in gazebo and move Eddie. Move it close to different walls and make sure they are displayed in rviz by the LaserScan display.
+
+<p align = "center">
+<img src = "exec2.2.png">
+</p>
+<p align = "center">
+Exercise 2.4
+</p>
 
 # Exercise 3
 
