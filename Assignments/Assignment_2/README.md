@@ -90,4 +90,13 @@ relation to each other and to the universe.
 
 Echo the `/conversation` topic in a terminal and run the two nodes. Take a screenshot of the output of all terminals.
 
+
+<p align = "center">
+<img src = "exec2.png">
+</p>
+<p align = "center">
+Exercise 2
+</p>
+
+
 \[1\] *Tao Te Ching, Book by Laoz*
