@@ -28,10 +28,16 @@ def generate_launch_description():
         Node(
             package='tf2_ros',
             executable='static_transform_publisher',
-            arguments = ['--x', '0', '--y', '0', '--z', '0', '--yaw', '0', '--pitch', '0', '--roll', '0', '--frame-id', 'world', '--child-frame-id', 'vehicle_blue/chassis/gpu_lidar']
+            arguments = ['--x', '0', '--y', '0', '--z', '0', '--yaw', '0', '--pitch', '0', '--roll', '0', '--frame-id', 'vehicle_blue/chassis', '--child-frame-id', 'vehicle_blue/chassis/gpu_lidar'],
         )
     )
-
+    ld.add_action(
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            arguments = ['--x', '0', '--y', '0', '--z', '0', '--yaw', '0', '--pitch', '0', '--roll', '0', '--frame-id', 'world', '--child-frame-id', 'vehicle_blue/odom'],
+        )
+    )
     ld.add_action(
         Node(
         package='rviz2',
@@ -45,9 +51,13 @@ def generate_launch_description():
         package='ros_gz_bridge',
         executable='parameter_bridge',
         arguments=['/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist',
-        'lidar@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan'],
-        )
+                    'lidar@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan',
+                    '/model/vehicle_blue/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V'],
+        
+        remappings=[('/model/vehicle_blue/tf', '/tf')]
+        ),
     )
+
 
     # ld.add_action(
     #     Node(
