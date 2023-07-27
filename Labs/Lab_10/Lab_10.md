@@ -45,8 +45,25 @@ You will be given the physical robot in the class to accurately measure the posi
 
 The sensors must be defined as a xacro macro with proper arguments. The topic name and sensor name must use xacro arguments. Create three instances of this macro with proper names in the *urdf/stacks/create_base.urdf.xacro* file. They must be placed in the correct position and orientation.
 
+<p align = "center">
+<img src = "exec1.png">
+</p>
+<p align = "center">
+Exercise 1
+</p>
+
+
 # Exercise 2
 
 Commit the changes you made in exercise 1. The commit message must be descriptive.
 
 Launch the robot using Gazebo the same way we did in the previous assignments. From the top right menu, add five Visualize LIDAR GUI modules and click on the refresh button. Select one of the ultrasonic topics in each module.
+
+<p align = "center">
+<img src = "exec2.png">
+</p>
+<p align = "center">
+Exercise 2
+</p>
+
+
