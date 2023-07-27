@@ -37,3 +37,10 @@ If you used the container method, rqt and turtlesim are already installed and yo
 
 ## Exercise
 Using rqt and `turtle_teleop_key`, create two turtles with different color trails and draw your initials on the screen. (If the first letters of your name and last name are more than two letters, draw only the first two letters). For example, if a person's name is John Doe. It can have a red turtle that draws J and a blue turtle that draws D. The letters do not have to be perfect, and letters with smooth and broken lines are also acceptable. You can use tmux for convenience.
+
+<p align = "center">
+<img src = "exec.png">
+</p>
+<p align = "center">
+Exercise
+</p>
